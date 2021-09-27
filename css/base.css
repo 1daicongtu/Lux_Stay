@@ -1,0 +1,211 @@
+:root{
+    --text-color: #222;
+    --white-color: #fff;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    line-height: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid{
+    width: 100%;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.grid__column-2{
+    width: 50%;
+    padding: 0 8px;
+}
+.grid__column-5{
+    width: 20%;
+    padding: 0 8px;
+}
+.grid__column-3{
+    width: 33.3334%;
+    padding: 0 8px;
+}
+.grid__column-4{
+    width: 25%;
+    padding: 0 8px;
+}
+.grid__full-width{
+    width: 100%;
+}
+.btn{
+    background-color: #555;
+    color: #fff;
+    font-size: 14px;
+}
+.btn-slider__prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+    z-index: 1;
+    color: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 7px -4px #000;
+    opacity: 0.5;
+}
+.btn-slider__prev >i {
+    color: rgba(0,0,0,0.5);
+}
+.btn-slider__prev:hover{
+}
+.btn-slider__next > i{
+    color: rgba(0,0,0,0.5);
+}
+.btn-slider__next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+    z-index: 1;
+    color: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 7px -4px #000;
+}
+.btn-slider__next:hover{
+    box-shadow: 0 0 7px -4px #f65e39;;
+}
+.btn-slider__next:hover > i{
+    color: #f65e39;
+}
+.btn-slider__prev:hover > i{
+}
+
+/** CSS MENU LANGUAGE **/
+.header__menu__language{
+    position: relative;
+}
+.header__menu__language__list__box{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #d6d6d6;
+    min-width: 470px;
+    background-color: #fff;
+    display: none;
+    animation: chuyendonglen ease 0.2s;
+}
+@keyframes chuyendonglen {
+    from{
+        transform: translateY(10%);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.top {
+    box-shadow: 0 -5px 5px -5px #333;
+}
+
+.right {
+    box-shadow: 5px 0 5px -5px #333;
+}
+.header__menu__language__list__box::before{
+    background: #fff;
+    position: absolute;
+    content: "";
+    top: -8px;
+    right: 15px;
+    transform: rotate(224deg);
+    height: 1rem;
+    width: 1rem;
+    border-top-left-radius: 3px;
+    box-shadow: 1px 1px 0px 0px #ccc;
+}
+.header__menu__language__box{
+    display: flex;
+    padding: 8px;
+}
+.header__menu__language__box-language{
+    width: 50%;
+    position: relative;
+}
+.menu__languague__item-language{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    text-decoration: none;
+    color:#222;
+    font-size: 16px;
+    font-weight: 500;
+}
+.menu__languague__item-language-img{
+    width: 16px;
+    object-fit: cover;
+    margin-right: 12px;
+
+}
+.menu__languague__item-language:hover .menu__languague__item-nameNational{
+    color:#f65e39;
+    transition: 0.2s;
+}
+.menu__languague__item-nameNational{
+
+}
+.menu__languague__item-iconCheck{
+    margin-left: 12px;
+    font-size: 9px;
+}
+.header__menu__language__box-language::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    background-color: #ccc;
+    width: 1px;
+    right: 0;
+}
+.header__menu__language__box-money{
+    width: 50%;
+}
+.menu__language__item__nameMoney
+{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+}
+.menu__language__item__nameMoney:not(.menu__languague__item-iconCheck):hover
+{
+    color: #f65e39;
+    transition: 0.2s;
+}
+.menu__language__item__nameMoney-viettat{
+    display: block;
+    font-weight: 600;
+    margin-right: 12px;
+}
+.menu__language__item__nameMoney-full{
+    display: block;
+}
