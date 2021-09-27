@@ -250,6 +250,10 @@
 .title-welcome__content-link{
     color: #222;
 }
+.title-welcome__content-link:hover{
+    color: #f65e39;
+    transition: 0.2s;
+}
 .container__address-hightlights{
     margin-top: 40px;
 }
